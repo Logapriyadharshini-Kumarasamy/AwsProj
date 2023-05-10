@@ -5,7 +5,7 @@ echo "Attaching the the AmazonSSMAutomationRole AWS Managed Policy..."
 echo "Creating the role and configuring the Trust Policy, to allow EC2 and Systems Manager to assume this role..."
 iamRoleArn=$(aws iam create-role --role-name "MyAutomationRole" 
 --assume-role-policy-document '{
-    "Version": "2012-10-17",
+    "Version": "2023-05-10",
     "Statement": [
         {
             "Effect": "Allow",
